@@ -1,10 +1,5 @@
 [
-  // no idea what this does
-  // {
-  //   "key": "shift+cmd+b",
-  //   "command": "-workbench.action.tasks.build"
-  // },
-
+  // Sidebar and explorer commands
   {
     "key": "shift+cmd+e",
     "command": "workbench.view.explorer",
@@ -15,7 +10,32 @@
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "filesExplorerFocus || searchViewletVisible"
   },
+  {
+    "key": "enter",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "filesExplorer.openFilePreserveFocus",
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.action.keepEditor"
+      ]
+    },
+    "when": "filesExplorerFocus"
+  },
+  {
+    "key": "enter",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "search.action.openResult",
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.action.keepEditor"
+      ]
+    },
+    "when": "searchViewletVisible && sideBarFocus"
+  },
 
+  // File and folder creation and renaming
   {
     "key": "cmd+n",
     "command": "workbench.action.files.newUntitledFile",
@@ -37,6 +57,25 @@
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
 
+  // Navigation commands
+  {
+    "key": "ctrl+[",
+    "command": "workbench.action.navigateBack"
+  },
+  {
+    "key": "ctrl+-",
+    "command": "-workbench.action.navigateBack"
+  },
+  {
+    "key": "ctrl+]",
+    "command": "workbench.action.navigateForward"
+  },
+  {
+    "key": "ctrl+shift+-",
+    "command": "-workbench.action.navigateForward"
+  },
+
+  // Editor and window management
   {
     "key": "cmd+ctrl+left",
     "command": "moveActiveEditor",
@@ -55,69 +94,13 @@
       "value": 1
     }
   },
-
-  {
-    "key": "ctrl+[",
-    "command": "workbench.action.navigateBack"
-  },
-  {
-    "key": "ctrl+-",
-    "command": "-workbench.action.navigateBack"
-  },
-  {
-    "key": "ctrl+]",
-    "command": "workbench.action.navigateForward"
-  },
-  {
-    "key": "ctrl+shift+-",
-    "command": "-workbench.action.navigateForward"
-  },
-
   {
     "key": "cmd+r",
     "command": "workbench.action.reloadWindow"
   },
-
   {
     "key": "shift+cmd+j",
     "command": "workbench.action.toggleMaximizedPanel"
-  },
-
-  // this needed?
-  // was is to prevent outdenting when "ctrl+d"ing down the page?
-  // {
-  //   "key": "ctrl+d",
-  //   "command": "-editor.action.outdentLines",
-  //   "when": "editorTextFocus && neovim.ctrlKeysInsert && !neovim.recording && neovim.mode == 'insert'"
-  // },
-
-  // for selecting html
-  {
-    "key": "alt+cmd+v",
-    "command": "editor.emmet.action.balanceIn"
-  },
-  {
-    "key": "alt+cmd+b",
-    "command": "editor.emmet.action.balanceOut"
-  },
-
-  {
-    "key": "shift+cmd+6",
-    "command": "codesnap.start"
-  },
-
-  {
-    "key": "shift+cmd+i",
-    "command": "turboConsoleLog.displayLogMessage"
-  },
-
-  {
-    "key": "cmd+k h",
-    "command": "-workbench.action.moveActiveEditorGroupLeft"
-  },
-  {
-    "key": "cmd+k l",
-    "command": "-workbench.action.moveActiveEditorGroupRight"
   },
   {
     "key": "cmd+k h",
@@ -126,55 +109,6 @@
   {
     "key": "cmd+k l",
     "command": "workbench.action.moveEditorToNextGroup"
-  },
-
-  // auto closes on file open from explorer
-  {
-    "key": "enter",
-    "command": "extension.multiCommand.execute",
-    "args": {
-      "sequence": [
-        "filesExplorer.openFilePreserveFocus",
-        "workbench.action.toggleSidebarVisibility",
-        "workbench.action.keepEditor"
-      ]
-    },
-    "when": "filesExplorerFocus"
-  },
-  // auto closes on file open from search
-  {
-    "key": "enter",
-    "command": "extension.multiCommand.execute",
-    "args": {
-      "sequence": [
-        "search.action.openResult",
-        "workbench.action.toggleSidebarVisibility",
-        "workbench.action.keepEditor"
-      ]
-    },
-    "when": "searchViewletVisible && sideBarFocus"
-  },
-
-  {
-    "key": "shift+;",
-    "command": "vim.showQuickpickCmdLine",
-    "when": "editorTextFocus && vim.mode != 'Insert'"
-  },
-
-  {
-    "key": "ctrl+p",
-    "command": "search.action.focusPreviousSearchResult",
-    "when": "hasSearchResult && searchViewletVisible"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "search.action.focusNextSearchResult",
-    "when": "hasSearchResult && searchViewletVisible"
-  },
-
-  {
-    "key": "cmd+0",
-    "command": "-workbench.action.focusSideBar"
   },
   {
     "key": "ctrl+cmd+t",
@@ -205,15 +139,43 @@
     "command": "workbench.action.focusLeftGroup"
   },
   {
-    "key": "cmd+k cmd+left",
-    "command": "-workbench.action.focusLeftGroup"
-  },
-  {
     "key": "ctrl+w l",
     "command": "workbench.action.focusRightGroup"
   },
+
+  // Emmet commands for HTML editing
+  // for selecting html
   {
-    "key": "cmd+k cmd+right",
-    "command": "-workbench.action.focusRightGroup"
+    "key": "alt+cmd+v",
+    "command": "editor.emmet.action.balanceIn"
+  },
+  {
+    "key": "alt+cmd+b",
+    "command": "editor.emmet.action.balanceOut"
+  },
+
+  // Miscellaneous commands
+  {
+    "key": "shift+cmd+6",
+    "command": "codesnap.start"
+  },
+  {
+    "key": "shift+cmd+i",
+    "command": "turboConsoleLog.displayLogMessage"
+  },
+  {
+    "key": "shift+;",
+    "command": "vim.showQuickpickCmdLine",
+    "when": "editorTextFocus && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "search.action.focusPreviousSearchResult",
+    "when": "hasSearchResult && searchViewletVisible"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "search.action.focusNextSearchResult",
+    "when": "hasSearchResult && searchViewletVisible"
   }
 ]
