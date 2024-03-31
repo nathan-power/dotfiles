@@ -1,0 +1,219 @@
+[
+  // no idea what this does
+  // {
+  //   "key": "shift+cmd+b",
+  //   "command": "-workbench.action.tasks.build"
+  // },
+
+  {
+    "key": "shift+cmd+e",
+    "command": "workbench.view.explorer",
+    "when": "!filesExplorerFocus || !searchViewletVisible"
+  },
+  {
+    "key": "shift+cmd+e",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "filesExplorerFocus || searchViewletVisible"
+  },
+
+  {
+    "key": "cmd+n",
+    "command": "workbench.action.files.newUntitledFile",
+    "when": "!filesExplorerFocus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus"
+  },
+  {
+    "key": "ctrl+shift+n",
+    "command": "explorer.newFolder",
+    "when": "filesExplorerFocus"
+  },
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+
+  {
+    "key": "cmd+ctrl+left",
+    "command": "moveActiveEditor",
+    "args": {
+      "to": "left",
+      "by": "tab",
+      "value": 1
+    }
+  },
+  {
+    "key": "cmd+ctrl+right",
+    "command": "moveActiveEditor",
+    "args": {
+      "to": "right",
+      "by": "tab",
+      "value": 1
+    }
+  },
+
+  {
+    "key": "ctrl+[",
+    "command": "workbench.action.navigateBack"
+  },
+  {
+    "key": "ctrl+-",
+    "command": "-workbench.action.navigateBack"
+  },
+  {
+    "key": "ctrl+]",
+    "command": "workbench.action.navigateForward"
+  },
+  {
+    "key": "ctrl+shift+-",
+    "command": "-workbench.action.navigateForward"
+  },
+
+  {
+    "key": "cmd+r",
+    "command": "workbench.action.reloadWindow"
+  },
+
+  {
+    "key": "shift+cmd+j",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+
+  // this needed?
+  // was is to prevent outdenting when "ctrl+d"ing down the page?
+  // {
+  //   "key": "ctrl+d",
+  //   "command": "-editor.action.outdentLines",
+  //   "when": "editorTextFocus && neovim.ctrlKeysInsert && !neovim.recording && neovim.mode == 'insert'"
+  // },
+
+  // for selecting html
+  {
+    "key": "alt+cmd+v",
+    "command": "editor.emmet.action.balanceIn"
+  },
+  {
+    "key": "alt+cmd+b",
+    "command": "editor.emmet.action.balanceOut"
+  },
+
+  {
+    "key": "shift+cmd+6",
+    "command": "codesnap.start"
+  },
+
+  {
+    "key": "shift+cmd+i",
+    "command": "turboConsoleLog.displayLogMessage"
+  },
+
+  {
+    "key": "cmd+k h",
+    "command": "-workbench.action.moveActiveEditorGroupLeft"
+  },
+  {
+    "key": "cmd+k l",
+    "command": "-workbench.action.moveActiveEditorGroupRight"
+  },
+  {
+    "key": "cmd+k h",
+    "command": "workbench.action.moveEditorToPreviousGroup"
+  },
+  {
+    "key": "cmd+k l",
+    "command": "workbench.action.moveEditorToNextGroup"
+  },
+
+  // auto closes on file open from explorer
+  {
+    "key": "enter",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "filesExplorer.openFilePreserveFocus",
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.action.keepEditor"
+      ]
+    },
+    "when": "filesExplorerFocus"
+  },
+  // auto closes on file open from search
+  {
+    "key": "enter",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "search.action.openResult",
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.action.keepEditor"
+      ]
+    },
+    "when": "searchViewletVisible && sideBarFocus"
+  },
+
+  {
+    "key": "shift+;",
+    "command": "vim.showQuickpickCmdLine",
+    "when": "editorTextFocus && vim.mode != 'Insert'"
+  },
+
+  {
+    "key": "ctrl+p",
+    "command": "search.action.focusPreviousSearchResult",
+    "when": "hasSearchResult && searchViewletVisible"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "search.action.focusNextSearchResult",
+    "when": "hasSearchResult && searchViewletVisible"
+  },
+
+  {
+    "key": "cmd+0",
+    "command": "-workbench.action.focusSideBar"
+  },
+  {
+    "key": "ctrl+cmd+t",
+    "command": "workbench.action.newWindowTab"
+  },
+  {
+    "key": "ctrl+shift+cmd+]",
+    "command": "workbench.action.showNextWindowTab"
+  },
+  {
+    "key": "ctrl+shift+cmd+[",
+    "command": "workbench.action.showPreviousWindowTab"
+  },
+  {
+    "key": "ctrl+cmd+w",
+    "command": "workbench.action.toggleWindowTabsBar"
+  },
+  {
+    "key": "ctrl+w \\",
+    "command": "workbench.action.minimizeOtherEditors"
+  },
+  {
+    "key": "ctrl+w =",
+    "command": "workbench.action.evenEditorWidths"
+  },
+  {
+    "key": "ctrl+w h",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "cmd+k cmd+left",
+    "command": "-workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "ctrl+w l",
+    "command": "workbench.action.focusRightGroup"
+  },
+  {
+    "key": "cmd+k cmd+right",
+    "command": "-workbench.action.focusRightGroup"
+  }
+]
