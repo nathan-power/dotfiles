@@ -1,1 +1,0 @@
-/Users/nate/.vimrc
