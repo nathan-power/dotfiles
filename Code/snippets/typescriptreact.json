@@ -1,0 +1,61 @@
+{
+	// Place your snippets for typescriptreact here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"React Native Stateless Component": {
+		"prefix": "rh",
+		"body": [
+		"import React from 'react';",
+		"import { View } from 'react-native';",
+		"import { useTheme } from 'react-native-themed-styles';",
+		"import { styleSheetFactory } from '~/utils/StyleSheetFactory';",
+		"",
+		"type ${TM_FILENAME_BASE}Props = {",
+		"",
+		"};",
+		"",
+		"export const ${TM_FILENAME_BASE}: React.FC<${TM_FILENAME_BASE}Props> = (props) => {",
+		" const [styles] = useTheme(styleSheet);",
+		"",
+		" return (",
+		"  <View style={styles.container}>",
+		"$1",
+		"  </View>",
+		" );",
+		"};",
+		"",
+		"const styleSheet = styleSheetFactory((theme) => ({",
+		"container: {",
+		" flex: 1,",
+		"},",
+		"}));"
+		]
+	},
+		
+	"React Function": {
+		"prefix": "rf",
+		"body": ["const $1 = ($2) => {","$3","}"],
+		"description": "Function template"
+	},
+
+	"React State": {
+		"prefix": "rs",
+		"body": [
+			"const [${1/(^[a-zA-Z].*)(?:B[a-z])*/$1$2, set${1:/capitalize}${2:/downcase}/g}] = useState($2)",
+		],
+		"description": "State template"
+	}
+}
+
+
