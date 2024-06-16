@@ -5,9 +5,10 @@
   "window.density.editorTabHeight": "compact",
   "window.commandCenter": false,
   "window.autoDetectColorScheme": true,
-
   // Editor settings
-  "editor.codeActionsOnSave": { "source.fixAll.eslint": "explicit" },
+  "editor.codeActionsOnSave": {
+    // "source.fixAll.eslint": "explicit"
+  },
   "editor.minimap.enabled": false,
   "editor.fontSize": 14,
   "editor.renderControlCharacters": false,
@@ -35,7 +36,6 @@
   "editor.scrollbar.verticalScrollbarSize": 10,
   "editor.accessibilitySupport": "off",
   "editor.smoothScrolling": true,
-
   // Workbench settings
   "workbench.colorCustomizations": {
     "tab.unfocusedActiveBorder": "#000000",
@@ -53,11 +53,10 @@
   "workbench.sideBar.location": "left",
   "workbench.preferredLightColorTheme": "Atom One Light",
   "workbench.preferredDarkColorTheme": "KanagawaTheme",
-  "workbench.colorTheme": "Atom One Light",
+  "workbench.colorTheme": "KanagawaTheme",
   "workbench.list.smoothScrolling": true,
   "workbench.layoutControl.enabled": false,
   "workbench.tree.enableStickyScroll": true,
-
   // ESlint settings
   "eslint.format.enable": true,
   "eslint.workingDirectories": ["Dir1", "Dir2"],
@@ -71,22 +70,31 @@
     "javascriptreact",
     "typescriptreact"
   ],
-
   // File settings
-  "files.exclude": { "**/._*": false },
+  "files.exclude": {
+    "**/._*": false
+  },
   "files.autoSave": "off",
   "files.autoSaveDelay": 500,
-
   // Language-specific settings
   "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[json]": { "editor.defaultFormatter": "vscode.json-language-features" },
-  "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[scss]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[python]": { "editor.formatOnType": true },
-
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
   // Terminal settings
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "terminal.integrated.cursorBlinking": false,
@@ -96,39 +104,39 @@
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.gpuAcceleration": "off",
-  "terminal.integrated.env.osx": { "FIG_NEW_SESSION": "1" },
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
   "terminal.integrated.smoothScrolling": true,
-
   // Vim settings
-  "vim.normalModeKeyBindings": [{ "before": ["Y"], "after": ["y", "$"] }],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["Y"],
+      "after": ["y", "$"]
+    }
+  ],
   "vim.visualModeKeyBindings": [],
   "vim.neovimPath": "/opt/homebrew/Cellar/neovim/0.8.0/bin/nvim",
   "vim.enableNeovim": true,
-
   // Markdown Preview Enhanced settings
   "markdown-preview-enhanced.previewTheme": "github-dark.css",
-
   // JavaScript settings
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.inlayHints.parameterNames.enabled": "none",
   "javascript.format.insertSpaceAfterConstructor": true,
-
   // TypeScript settings
   "typescript.inlayHints.parameterNames.enabled": "none",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.format.enable": false,
-  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
-
+  // "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   // Explorer settings
   "explorer.confirmDragAndDrop": false,
-
   // CodeSnap settings
   "codesnap.realLineNumbers": true,
   "codesnap.target": "window",
   "codesnap.shutterAction": "copy",
   "codesnap.showWindowTitle": true,
   "codesnap.roundedCorners": true,
-
   // Other settings
   "json.maxItemsComputed": 20000,
   "go.toolsManagement.autoUpdate": true,
@@ -160,7 +168,15 @@
   "rust-analyzer.inlayHints.chainingHints.enable": false,
   "gitlens.hovers.currentLine.over": "line",
   "security.workspace.trust.untrustedFiles": "open",
-  "editor.tokenColorCustomizations": { "textMateRules": [] },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": []
+  },
   "accessibility.voice.speechTimeout": 2000,
-  "gitlens.gitCommands.closeOnFocusOut": true
+  "gitlens.gitCommands.closeOnFocusOut": true,
+  "workbench.activityBar.location": "bottom",
+  "git.autofetch": "all",
+  "terminal.integrated.experimentalInlineChat": true,
+  "terminal.integrated.rescaleOverlappingGlyphs": true,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "window.zoomLevel": -2
 }
