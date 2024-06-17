@@ -16,7 +16,7 @@
   "editor.mouseWheelScrollSensitivity": 10,
   "editor.formatOnSave": true,
   "editor.hover.delay": 450,
-  "editor.fontFamily": "'Fira Code'",
+  "editor.fontFamily": "'SauceCodePro Nerd Font'", // others: "'Fira Code'"
   "editor.fontLigatures": true,
   "editor.cursorBlinking": "expand",
   "editor.cursorStyle": "line",
