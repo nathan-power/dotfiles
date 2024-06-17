@@ -52,7 +52,7 @@
   "workbench.tree.renderIndentGuides": "always",
   "workbench.sideBar.location": "left",
   "workbench.preferredLightColorTheme": "Atom One Light",
-  "workbench.preferredDarkColorTheme": "KanagawaTheme",
+  "workbench.preferredDarkColorTheme": "Xcode Default (Dark Customized Version)",
   "workbench.colorTheme": "KanagawaTheme",
   "workbench.list.smoothScrolling": true,
   "workbench.layoutControl.enabled": false,
