@@ -23,6 +23,9 @@ source ~/.zsh/repos/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Misc
 [ -f "$HOME/.zsh/oh-my-zsh.zsh" ] && source "$HOME/.zsh/oh-my-zsh.zsh"
 
+# Exports
+[ -f "$HOME/.zsh/exports.zsh" ] && source "$HOME/.zsh/exports.zsh"
+
 # p10k
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
