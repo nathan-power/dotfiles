@@ -24,3 +24,6 @@ bindkey -s '^O' zranger
 
 # system defaults
 export EDITOR=nvim
+
+# g
+alias gvm="$GOPATH/bin/g"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
